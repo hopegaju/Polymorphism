@@ -1,5 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        PaymentProcessor payment = new PaymentProcessor();
+        Bitcoin bitcoin = new Bitcoin();
+        payment.processPayment(new Bitcoin());
     }
 }
