@@ -15,4 +15,13 @@ public class PaymentProcessor {
     public void processPayment(CreditCard creditCard) {
         System.out.println("Processing CreditCard Payment");
     }
+    public void processPayment(ApplePay applePay) {
+        String expectedAccountNumber = applePay.getAccountNumber();
+        String expectedAuthentication = applePay.getAuthentication();
+        if (applePay.getAccountNumber().equals(expectedAccountNumber) && applePay.getAuthentication().equals(expectedAuthentication)){
+            System.out.println("Processing ApplePay Payment for " + applePay.getAccountNumber());
+        }else {
+            System.out.println("ApplePay Payment credentials are incorrect");
+        }
+    }
 }
