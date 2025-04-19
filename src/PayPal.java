@@ -1,8 +1,8 @@
 public class PayPal {
     private String email;
-    private int password;
+    private String password;
 
-    public PayPal(String email, int password) {
+    public PayPal(String email, String password) {
         this.email = email;
         this.password = password;
     }
@@ -11,7 +11,7 @@ public class PayPal {
         return email;
     }
 
-    public int getPassword() {
+    public String getPassword() {
         return password;
     }
 }

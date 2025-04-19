@@ -4,7 +4,13 @@ public class PaymentProcessor {
         System.out.println("Transaction ID: " + bitcoin.getTransactionId());
     }
     public void processPayment(PayPal payPal) {
-        System.out.println("Processing PayPal Payment");
+        String expectedEmail = "user@example.com";
+        String expectedPassword = "securePass123";
+        if (payPal.getEmail().equals(expectedEmail) && payPal.getPassword().equals(expectedPassword)){
+            System.out.println("Processing PayPal Payment for " + payPal.getEmail());
+        } else {
+            System.out.println("PayPal Payment credentials are incorrect");
+        }
     }
     public void processPayment(CreditCard creditCard) {
         System.out.println("Processing CreditCard Payment");
