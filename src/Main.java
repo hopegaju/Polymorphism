@@ -4,5 +4,6 @@ public class Main {
         Bitcoin bitcoin = new Bitcoin();
         payment.processPayment(new Bitcoin());
         payment.processPayment(new PayPal());
+        payment.processPayment(new CreditCard());
     }
 }
